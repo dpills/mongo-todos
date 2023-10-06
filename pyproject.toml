@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "mongo"
+version = "0.1.0"
+description = ""
+authors = ["dpills"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pymongo = "^4.5.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.292"
+black = "^23.9.1"
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+select = ["E", "F", "I"]
+fixable = ["ALL"]
+exclude = [".git", ".ruff_cache"]
+line-length = 88
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
